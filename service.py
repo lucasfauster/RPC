@@ -21,5 +21,5 @@ class MyService(rpyc.Service):
     
 #Para iniciar o servidor
 if __name__ == "__main__":
-    t = ThreadedServer(MyService, port=8000)
+    t = ThreadedServer(MyService, port=18861)
     t.start()
