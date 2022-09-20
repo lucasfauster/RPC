@@ -1,4 +1,5 @@
 import rpyc
+import time
 from rpyc.utils.server import ThreadedServer
  
  
@@ -17,10 +18,8 @@ class MyService(rpyc.Service):
   
 #Para iniciar o servidor
 if __name__ == "__main__":
-   t = ThreadedServer(MyService, port=8000)
+   t = ThreadedServer(MyService, port=18861)
+   start = time.time()
    t.start()
-
-start = time.time()
-instruções
-end = time.time()
-print(end-start)
+   end = time.time()
+   print(end-start)

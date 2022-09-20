@@ -7,12 +7,12 @@ if len(sys.argv) < 3:
  
 server = sys.argv[1]
 n = int(sys.argv[2])
+start = time.time()
 conn = rpyc.connect(server,8000)
  
 vector = [random.randint(0, n-1) for i in range(n)]
 print("sum:  " + str(conn.root.sum_vector(vector)))
 
-start = time.time()
-instruções
+
 end = time.time()
 print(end-start)
