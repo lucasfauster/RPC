@@ -10,5 +10,5 @@ n = int(sys.argv[2])
 conn = rpyc.connect(server,8000)
  
 vector = [random.randint(0, n-1) for i in range(n)]
-print("sum:  " + str(conn.root.sum_vector(vector)))
-
+soma = conn.root.get_sum(vector)
+print("sum:  " + str(soma))

@@ -20,6 +20,6 @@ class MyService(rpyc.Service):
   
 #Para iniciar o servidor
 if __name__ == "__main__":
-   t = ThreadedServer(MyService, port=18861)
+   t = ThreadedServer(MyService, port=18861, protocol_config = {"sync_request_timeout" : None})
    t.start()
    

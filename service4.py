@@ -11,8 +11,7 @@ class MyService(rpyc.Service):
        # código que é executado quando uma conexão é finalizada, caso seja necessário
        pass
  
-   @staticmethod
-   def exposed_sum_vector(vector):
+   def exposed_get_sum(self, vector):
        return sum(vector)
   
 #Para iniciar o servidor
